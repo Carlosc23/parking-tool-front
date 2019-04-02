@@ -1,8 +1,25 @@
 .frame{
     background: #fff;
-    width: 50%;
-    height: 50%;
+    width: 80%;
+    height: 600px;
     text-align: center;
+    margin-left: 10%;
+    margin-top: 5%
+}
+ h1{
+    position: absolute;
+    margin-top:2%;
+    margin-left: 28%
+}
+p{
+    position: absolute;
+    margin-top:17%;
+    margin-left:29%
+}
+.logo{
+    position: absolute;
+    margin-top:5%;
+    margin-left:3%
 }
 body{
     background: #000;
