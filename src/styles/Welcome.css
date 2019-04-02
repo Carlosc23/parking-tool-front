@@ -21,6 +21,11 @@ p{
     margin-top:5%;
     margin-left:3%
 }
+.typeParking{
+    position: absolute;
+    margin-top:21%;
+    margin-left:17%
+}
 body{
     background: #000;
     
