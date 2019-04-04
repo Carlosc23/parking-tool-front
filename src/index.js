@@ -11,6 +11,7 @@ const routing = (
     <Router>
         <div>
             <Route path="/" component={Welcome} />
+            
         </div>
     </Router>
 )
