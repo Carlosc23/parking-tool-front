@@ -5,6 +5,8 @@ import normalc from '../../assets/img/normalc.PNG';
 import pregnant from '../../assets/img/pregnant.PNG';
 import specialn from '../../assets/img/specialn.PNG';
 import '../../styles/Welcome.css'
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+
 export default class Welcome extends Component {
     render() {
       return (
@@ -21,9 +23,15 @@ export default class Welcome extends Component {
             Seleccione el tipo de parqueo que necesita
         </p>
         <div className="typeParking">
-        <img src={normalc} alt="normalc" width="30%" height="30%" />
-        <img src={pregnant} alt="pregnant" width="30%" height="30%" />
-        <img src={specialn} alt="specialn" width="30%" height="30%" />
+        <Link to ="/normal">
+        <img src={normalc} alt="normalc" width="30%" height="29%" />
+        </Link>
+        <Link to ="/pregnant">
+        <img src={pregnant} alt="pregnant" width="32%" height="30%" />
+        </Link>
+        <Link to ="/specialn">
+        <img src={specialn} alt="specialn" width="33%" height="30%" />
+        </Link>
         </div>
         
       </header>
