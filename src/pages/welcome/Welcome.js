@@ -23,13 +23,13 @@ export default class Welcome extends Component {
             Seleccione el tipo de parqueo que necesita
         </p>
         <div className="typeParking">
-        <Link to ="/normal.html">
+        <Link to ="/normal">
         <img src={normalc} alt="normalc" width="30%" height="29%" />
         </Link>
-        <Link to ="/pregnant.html">
+        <Link to ="/pregnant">
         <img src={pregnant} alt="pregnant" width="32%" height="30%" />
         </Link>
-        <Link to ="/specialn.html">
+        <Link to ="/specialn">
         <img src={specialn} alt="specialn" width="33%" height="30%" />
         </Link>
         </div>

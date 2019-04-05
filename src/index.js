@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Welcome from './pages/welcome/Welcome';
+import Size from './pages/welcome/Size';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
 
     <Router>
-        <div>
-            <Route path="/" component={Welcome} />
+   <Switch>
+            <Route exact path="/" component={App} /> 
+            <Route path="/normal" component={Size} /> 
             
-        </div>
+    </Switch>
     </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'));

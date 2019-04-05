@@ -1,13 +1,13 @@
 import React, { Component }  from "react";
 
 import logo from '../../assets/img/logo.png';
-import small from '../../assets/img/small.PNG';
-import med from '../../assets/img/med.PNG';
-import large from '../../assets/img/large.PNG';
+import small from '../../assets/img/small.png';
+import med from '../../assets/img/med.png';
+import large from '../../assets/img/large.png';
 import '../../styles/Size.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-export default class Size extends Component {
+class Size extends Component {
     render() {
       return (
         <div className="frame" >
@@ -39,4 +39,4 @@ export default class Size extends Component {
       );
     }
   }
-  
+  export default Size;
