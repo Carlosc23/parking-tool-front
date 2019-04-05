@@ -4,7 +4,7 @@ import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import Welcome from './pages/welcome/Welcome';
-import Size from './pages/welcome/Size';
+import Size from './pages/Size/Size';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (

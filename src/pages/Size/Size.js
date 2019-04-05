@@ -13,7 +13,7 @@ class Size extends Component {
         <div className="frame" >
         <header>
         <h1 >
-        HOLA!
+  
           
         </h1>
         <div className="logo">
@@ -24,13 +24,13 @@ class Size extends Component {
         </p>
         <div className="typeParking">
         <Link to ="/small">
-        <img src={small} alt="small" width="30%" height="29%" />
+        <img src={small} alt="small" width="28%" height="30%" />
         </Link>
         <Link to ="/med">
-        <img src={med} alt="med" width="32%" height="30%" />
+        <img src={med} alt="med" width="30%" height="30%" />
         </Link>
         <Link to ="/large">
-        <img src={large} alt="large" width="33%" height="30%" />
+        <img src={large} alt="large" width="30%" height="30%" />
         </Link>
         </div>
         
