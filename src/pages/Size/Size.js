@@ -5,7 +5,7 @@ import small from '../../assets/img/small.png';
 import med from '../../assets/img/med.png';
 import large from '../../assets/img/large.png';
 import '../../styles/Size.css'
-import tam from '../../index.js'
+import tam from '../../index.js' //pendiente por arreglar
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 class Size extends Component {
