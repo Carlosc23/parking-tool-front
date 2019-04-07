@@ -1,9 +1,10 @@
 import React, { Component }  from "react";
-
 import logo from '../../assets/img/logo.png';
 import ava from '../../assets/img/available.png';
 import ocp from '../../assets/img/occupied.png';
 import '../../styles/Parking.css'
+import btn from '../../assets/img/botonticket.png';
+
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 class Parking extends Component {
@@ -23,9 +24,10 @@ class Parking extends Component {
         
         <img src={ava} alt="parkings" width="50%" height="30%" />
         
-        <Link to ="/ticket">
-        <img src={logo} alt="button" width="30%" height="30%" />
+        <Link to ="/print">
+        <img src={btn} alt="button" width="15%" height="15%" />
         </Link>
+
         </div>
         
       </header>

@@ -6,6 +6,8 @@ import App from './App';
 import Welcome from './pages/welcome/Welcome';
 import Size from './pages/Size/Size';
 import Parks from './pages/Parkings/Parkings';
+import Final from './pages/ticket/ticket';
+
 import * as serviceWorker from './serviceWorker';
 
 
@@ -17,6 +19,8 @@ const routing = (
             <Route exact path="/" component={App} /> 
             <Route path="/normal" component={Size} /> 
             <Route path="/ticket" component={Parks} /> 
+            <Route path="/print" component={Final} /> 
+
             
     </Switch>
     </Router>
