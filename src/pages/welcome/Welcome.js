@@ -7,6 +7,8 @@ import specialn from '../../assets/img/specialn.PNG';
 import '../../styles/Welcome.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
+
+
 export default class Welcome extends Component {
     render() {
       return (
@@ -26,10 +28,10 @@ export default class Welcome extends Component {
         <Link to ="/normal">
         <img src={normalc} alt="normalc" width="30%" height="29%" />
         </Link>
-        <Link to ="/pregnant">
+        <Link to ="/ticket">
         <img src={pregnant} alt="pregnant" width="32%" height="30%" />
         </Link>
-        <Link to ="/specialn">
+        <Link to ="/ticket">
         <img src={specialn} alt="specialn" width="33%" height="30%" />
         </Link>
         </div>

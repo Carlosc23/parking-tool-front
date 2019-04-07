@@ -1,13 +1,12 @@
 import React, { Component }  from "react";
 
 import logo from '../../assets/img/logo.png';
-import small from '../../assets/img/small.png';
-import med from '../../assets/img/med.png';
-import large from '../../assets/img/large.png';
-import '../../styles/Size.css'
+import ava from '../../assets/img/available.png';
+import ocp from '../../assets/img/occupied.png';
+import '../../styles/Parking.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-class Size extends Component {
+class Parking extends Component {
     render() {
       return (
         <div className="frame" >
@@ -18,17 +17,14 @@ class Size extends Component {
         <img src={logo} alt="logo" width="30%" height="30%" />
         </div>
         <p>
-            Seleccione el tipo de vehiculo que tiene
+            Por favor busque el parqueo que tenga la luz del color indicado en el mini mapa
         </p>
         <div className="typeParking">
+        
+        <img src={ava} alt="parkings" width="50%" height="30%" />
+        
         <Link to ="/ticket">
-        <img src={small} alt="small" width="28%" height="30%" />
-        </Link>
-        <Link to ="/ticket">
-        <img src={med} alt="med" width="30%" height="30%" />
-        </Link>
-        <Link to ="/ticket">
-        <img src={large} alt="large" width="30%" height="30%" />
+        <img src={logo} alt="button" width="30%" height="30%" />
         </Link>
         </div>
         
@@ -37,4 +33,4 @@ class Size extends Component {
       );
     }
   }
-  export default Size;
+  export default Parking;

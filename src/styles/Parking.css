@@ -1,0 +1,32 @@
+.frame{
+    background: #fff;
+    width: 80%;
+    height: 600px;
+    text-align: center;
+    margin-left: 10%;
+    margin-top: 5%
+}
+ h1{
+    position: absolute;
+    margin-top:2%;
+    margin-left: 28%
+}
+p{
+    position: absolute;
+    margin-top:17%;
+    margin-left:20%
+}
+.logo{
+    position: absolute;
+    margin-top:5%;
+    margin-left:-1%
+}
+.typeParking{
+    position: absolute;
+    margin-top:21%;
+    margin-left:-10%
+}
+body{
+    background: #000;
+    
+}
