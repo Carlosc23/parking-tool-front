@@ -17,7 +17,7 @@ class Parking extends Component {
         <img src={logo} alt="logo" width="30%" height="30%" />
         </div>
       
-        <div className="typeParking">
+        <div className="finalmessage">
         
         <img src={fin} alt="parkings" width="100%" height="100%" />
         
