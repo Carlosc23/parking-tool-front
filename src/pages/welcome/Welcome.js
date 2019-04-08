@@ -28,16 +28,30 @@ export default class Welcome extends Component {
             Seleccione el tipo de parqueo que necesita
         </p>
         <div className="typeParking">
-        <Link to ="/normal">
-        <img src={normalc} alt="normalc" width="30%" height="29%"  />
+        <Link to={{
+  pathname: '/normal',
+  state: {
+    tipo: 1
+  }
+}}>        <img src={normalc} alt="normalc" width="30%" height="29%" />
         
         </Link>
-        <Link to ="/ticket">
-        <img src={pregnant} alt="pregnant" width="32%" height="30%" />
+        <Link to={{
+  pathname: '/ticket',
+  state: {
+    tipo: 2,
+    tam:0
+  }
+}}>          <img src={pregnant} alt="pregnant" width="32%" height="30%" />
         
         </Link>
-        <Link to ="/ticket">
-        <img src={specialn} alt="specialn" width="33%" height="30%"  />
+        <Link to={{
+  pathname: '/ticket',
+  state: {
+    tipo: 2,
+    tam:0
+  }
+}}>        <img src={specialn} alt="specialn" width="33%" height="30%"  />
         </Link>
         </div>
         

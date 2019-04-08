@@ -28,7 +28,7 @@ class Parking extends Component {
         <img src={logo} alt="logo" width="30%" height="30%" />
         </div>
         <p className="mensaje">
-            Por favor busque el parqueo que tenga la luz del color indicado en el mini mapa
+            Por favor busque el parqueo que tenga la luz del color indicado en el mini mapa. tipo:{this.props.location.state.tipo}, tamaño:{this.props.location.state.tam}
         </p>
         <div className="laststep">
         <Prueba />
