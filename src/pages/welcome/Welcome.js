@@ -7,7 +7,10 @@ import specialn from '../../assets/img/specialn.PNG';
 import '../../styles/Welcome.css'
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
-
+var state={
+  type:0,
+  size:0
+}
 
 export default class Welcome extends Component {
     render() {
@@ -26,13 +29,15 @@ export default class Welcome extends Component {
         </p>
         <div className="typeParking">
         <Link to ="/normal">
-        <img src={normalc} alt="normalc" width="30%" height="29%" />
+        <img src={normalc} alt="normalc" width="30%" height="29%"  />
+        
         </Link>
         <Link to ="/ticket">
         <img src={pregnant} alt="pregnant" width="32%" height="30%" />
+        
         </Link>
         <Link to ="/ticket">
-        <img src={specialn} alt="specialn" width="33%" height="30%" />
+        <img src={specialn} alt="specialn" width="33%" height="30%"  />
         </Link>
         </div>
         
