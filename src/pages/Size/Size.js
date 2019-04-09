@@ -1,4 +1,4 @@
-import React, { Component }  from "react";
+import React, { Component } from "react";
 
 import logo from '../../assets/img/logo.png';
 import small from '../../assets/img/small.png';
@@ -11,55 +11,55 @@ import state from '../welcome/Welcome.js';
 
 
 class Size extends Component {
-    render() {
-      return (
+  render() {
+    return (
 
-        
-        <div className="frame" >
+
+      <div className="frame" >
         <header>
-        <h1 >
-          
-        </h1>
-        <div className="logo">
-        <img src={logo} alt="logo" width="30%" height="30%" />
-        </div>
-        <p>
-            Seleccione el tipo de vehiculo que tienee. tipo: {this.props.location.state.tipo}
-            {console.log("aaaa"+this.props.location.state.tipo)}
-        </p>
-        
-        <div className="sizecar">
-        <Link to={{
-  pathname: '/ticket',
-  state: {
-    tipo:1,
-    tam: 1
-  }
-}}>        <img src={small} alt="small" width="28%" height="30%" />
-        </Link>
-        <Link to={{
-  pathname: '/ticket',
-  state: {
-    tipo:1,
-    tam: 2
-  }
-}}>        <img src={med} alt="med" width="30%" height="30%"/>
+          <h1 >
 
-        </Link>
-        <Link to={{
-  pathname: '/ticket',
-  state: {
-    tipo:1,
-    tam: 3
-  }
-}}>        <img src={large} alt="large" width="30%" height="30%" />
+          </h1>
+          <div className="logo">
+            <img src={logo} alt="logo" width="30%" height="30%" />
+          </div>
+          <p>
+            Seleccione el tipo de vehiculo que tienee. 
+            {console.log("aaaa" + this.props.location.state.tipo)}
+          </p>
 
-        </Link>
-        </div>
-        
-      </header>
+          <div className="sizecar">
+            <Link to={{
+              pathname: '/ticket',
+              state: {
+                tipo: this.props.location.state.tipo,
+                tam: 1
+              }
+            }}>        <img src={small} alt="small" width="31%" height="31%" />
+            </Link>
+            <Link to={{
+              pathname: '/ticket',
+              state: {
+                tipo: this.props.location.state.tipo,
+                tam: 2
+              }
+            }}>        <img src={med} alt="med" width="32%" height="10%" />
+
+            </Link>
+            <Link to={{
+              pathname: '/ticket',
+              state: {
+                tipo: this.props.location.state.tipo,
+                tam: 3
+              }
+            }}>        <img src={large} alt="large" width="32%" height="32%" />
+
+            </Link>
+          </div>
+
+        </header>
       </div>
-      );
-    }
+    );
   }
-  export default Size;
+}
+export default Size;
