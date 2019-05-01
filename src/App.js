@@ -6,10 +6,7 @@ import Welcome from './pages/welcome/Welcome.js'
 class App extends Component {
   render() {
     return (
-     //<div className="App">
-       //<div>
-     <Welcome/>
-      //</div>
+    <Welcome></Welcome>
     );
   }
 }

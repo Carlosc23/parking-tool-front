@@ -19,12 +19,12 @@ p{
 .logo{
     position: absolute;
     margin-top:5%;
-    margin-left:5%
+    margin-left:-1%
 }
-.typeParking{
+.finalmessage{
     position: absolute;
-    margin-top:21%;
-    margin-left:15%
+    margin-top:15%;
+    margin-left:12%
 }
 body{
     background: #000;

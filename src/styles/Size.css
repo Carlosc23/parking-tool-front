@@ -19,12 +19,12 @@ p{
 .logo{
     position: absolute;
     margin-top:5%;
-    margin-left:5%
+    margin-left:-1%
 }
-.typeParking{
+.sizecar{
     position: absolute;
     margin-top:21%;
-    margin-left:15%
+    margin-left:18%
 }
 body{
     background: #000;
