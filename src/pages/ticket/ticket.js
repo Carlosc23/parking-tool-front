@@ -11,8 +11,7 @@ class Parking extends Component {
       return (
         <div className="frame" >
         <header>
-        <h1 >
-        </h1>
+       
         <div className="logo">
         <img src={logo} alt="logo" width="30%" height="30%" />
         </div>

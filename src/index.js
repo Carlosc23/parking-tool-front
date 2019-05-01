@@ -7,6 +7,10 @@ import Welcome from './pages/welcome/Welcome';
 import Size from './pages/Size/Size';
 import Parks from './pages/Parkings/Parkings';
 import Final from './pages/ticket/ticket';
+import admin from './pages/admin/admin';
+import uso from './pages/admin/uso';
+import ingresos from './pages/admin/ingresos';
+import sensores from './pages/admin/sensores';
 
 import * as serviceWorker from './serviceWorker';
 var tipo= 0;
@@ -24,8 +28,12 @@ const routing = (
             <Route path="/normal" component={Size} /> 
             <Route path="/ticket" component={Parks} /> 
             <Route path="/print" component={Final} /> 
+            <Route path="/admin" component={admin} /> 
+            <Route path="/uso" component={uso} /> 
+            <Route path="/ingresos" component={ingresos} /> 
+            <Route path="/sensores" component={sensores} /> 
 
-            
+
     </Switch>
     </Router>
 )

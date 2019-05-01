@@ -18,13 +18,13 @@ export default class Welcome extends Component {
       <div className="frame" >
         <header>
 
-          <h1 >
+          <h1 id="maintitle">
             Bienvenido al Parqueo
         </h1>
           <div className="logo">
             <img src={logo} alt="logo" width="30%" height="30%" />
           </div>
-          <p>
+          <p id="mainmessage">
             Seleccione el tipo de parqueo que necesita
         </p>
           <div className="typeParking">
