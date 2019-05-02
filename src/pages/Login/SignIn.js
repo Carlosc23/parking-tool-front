@@ -13,6 +13,8 @@ import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import withStyles from '@material-ui/core/styles/withStyles';
 
+let email ="";
+let password = "";
 const styles = theme => ({
   main: {
     width: 'auto',
@@ -44,7 +46,19 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
   },
 });
+let handleEmailChange = (e) => {
+   //this.setState({email: e.target.value});
+   email = e.target.value;
+},
 
+handlePasswordChange = (e) => {
+   //this.setState({password: e.target.value});
+   password = e.target.value;
+},
+handleLogin = () =>{
+    console.log("EMail: " + email);
+    console.log("Password: " + password);
+}
 function SignIn(props) {
   const { classes } = props;
 
@@ -56,29 +70,28 @@ function SignIn(props) {
           <LockOutlinedIcon />
         </Avatar>
         <Typography component="h1" variant="h5">
-          Sign in
+        <br /> <br /> Login
+        <br /> <br /> 
         </Typography>
         <form className={classes.form}>
           <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="email">Email Address</InputLabel>
-            <Input id="email" name="email" autoComplete="email" autoFocus />
+            <Input id="email" name="email"   onChange={handleEmailChange} autoFocus />
           </FormControl>
           <FormControl margin="normal" required fullWidth>
             <InputLabel htmlFor="password">Password</InputLabel>
-            <Input name="password" type="password" id="password" autoComplete="current-password" />
+            <Input name="password" type="password" id="password"  onChange={handlePasswordChange}/>
           </FormControl>
-          <FormControlLabel
-            control={<Checkbox value="remember" color="primary" />}
-            label="Remember me"
-          />
+          
           <Button
-            type="submit"
+            //type="submit"
             fullWidth
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleLogin}
           >
-            Sign in
+            Login
           </Button>
         </form>
       </Paper>
