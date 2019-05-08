@@ -18,6 +18,8 @@ const costo=5;
 var contadores= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
 
 
+
+
 fetch(proxyurl +url)
 .then(data=>{return data.json()})
 .then(res=> {console.log(res)
@@ -69,7 +71,7 @@ var key,prueba,count=0;
 
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['00','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24'],
   datasets: [
     {
       label: 'Cantidad de dinero ganado por ',
