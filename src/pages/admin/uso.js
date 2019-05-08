@@ -5,20 +5,22 @@ import SideBar from './sidebar';
 import logo from '../../assets/img/logo.png';
 import grafica from '../../assets/img/Estacionamientosporhora.png';
 import '../../styles/uso.css'
+import Chart from '../../componentes/Chart';
 
 export default function App() {
   return (
     <div id="App">
       <SideBar />
       <div id="page-wrap">
-      <img src={logo} alt="logo" width="10%" height="10%" />
+      <img src={logo} id="logo" alt="logo" width="12%" height="13%" float="left"/>
 
-        <h2>Administrator</h2>
+<h2 id="title" >Administrator</h2>
       </div>
         <h1 id="subuso">Estacionamientos utilizados por horas</h1>
         <img src={grafica} alt="grafica" width="50%" height="50%" id="grafica"/>
         <p id="miniuso">El dia de hoy XX/XX/XXXX hemos tenido como las horas mas altas la 1 de la tarde, y las 8 de la noche. Con una ocupacion maxima de 150 estacionamintos y una ocupacopn minima de 20</p>
-
+        <Chart />
+        
     </div>
   );
 }

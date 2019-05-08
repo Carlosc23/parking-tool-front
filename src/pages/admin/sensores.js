@@ -12,9 +12,9 @@ export default function App() {
     <div id="App">
       <SideBar />
       <div id="page-wrap">
-      <img src={logo} alt="logo" width="10%" height="10%" />
+      <img src={logo} id="logo" alt="logo" width="12%" height="13%" float="left"/>
 
-        <h2>Administrator</h2>
+<h2 id="title" >Administrator</h2>
       </div>
       <h1 id="subsensores">Indicacion segun los sensores</h1>
       <img src={grafica} alt="grafica" width="50%" height="50%" id="grafica"/>

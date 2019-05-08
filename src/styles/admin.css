@@ -80,3 +80,13 @@
     color:  black;
     
 }
+
+#title{
+  float: left;
+  margin-left: 45%;
+  margin-right: 31.4%;
+}
+
+#logo{
+  float: right;
+}
