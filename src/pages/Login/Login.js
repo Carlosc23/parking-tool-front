@@ -72,7 +72,7 @@ class Login extends Component {
           
           console.log(response.data);
           if (response.data =="Ok"){
-            this.props.history.push('/dashboard');
+            this.props.history.push('/admin');
             Alert.success('Bienvenido', {
               position: 'bottom-left'
             });

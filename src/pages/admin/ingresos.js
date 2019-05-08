@@ -6,6 +6,7 @@ import logo from '../../assets/img/logo.png';
 
 import grafica from '../../assets/img/Gananciasvshora.png';
 import '../../styles/ingresos.css'
+import LineDemo from '../../Comp/LineDemo'
 
 export default function App() {
   return (
@@ -19,8 +20,9 @@ export default function App() {
 
 
         <h1 id="subingresos">Ingresos por parqueo</h1>
-        <img src={grafica} alt="grafica" width="50%" height="50%" id="grafica"/>
-        <p id="miniingresos">El dia de hoy XX/XX/XXXX hemos tenido como las horas mas altas la 1 de la tarde, y las 8 de la noche. Con una ganancia maxima de Q.750 y una ganancia minima de Q.100</p>
+        <br></br>
+        <br></br>
+        <LineDemo />        <p id="miniingresos">El dia de hoy XX/XX/XXXX hemos tenido como las horas mas altas la 1 de la tarde, y las 8 de la noche. Con una ganancia maxima de Q.750 y una ganancia minima de Q.100</p>
 
     </div>
   );
