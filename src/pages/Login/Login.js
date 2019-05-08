@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import logo from '../../assets/img/logo.png';
+import Alert from 'react-s-alert';
 import {
   Container, Col, Form,
   FormGroup, Label, Input,
@@ -8,6 +9,17 @@ import {
 import './Login.css';
 import { Redirect } from 'react-router';
 import { withRouter } from 'react-router-dom';
+import axios from 'axios';
+import 'react-s-alert/dist/s-alert-default.css';
+ 
+// optional - you can choose the effect you want
+import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+import 'react-s-alert/dist/s-alert-css-effects/scale.css';
+import 'react-s-alert/dist/s-alert-css-effects/bouncyflip.css';
+import 'react-s-alert/dist/s-alert-css-effects/flip.css';
+import 'react-s-alert/dist/s-alert-css-effects/genie.css';
+import 'react-s-alert/dist/s-alert-css-effects/jelly.css';
+import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -46,22 +58,49 @@ class Login extends Component {
   }
 
   submitForm(e) {
+    const headers = {
+      'Content-Type': 'application/json',
+  };
     e.preventDefault();
     console.log(`Email: ${ this.state.email }`);
-    if (this.state.email == "cal15219@uvg.edu.gt"){
-      console.log("algo");
-      this.state.flag = true;
-      console.log(this.state.flag);
-      //return <Redirect to='/target' />
-      this.props.history.push('/dashboard');
-    }
-    else{
-      this.state.flag = false;
-    }
+    axios.post('https://parking-tool-back.herokuapp.com/parking_tool/api/v1.0/Login', {
+      email: this.state.email,
+      password: this.state.password
+    }, {headers: headers})
+
+        .then((response) => {
+          
+          console.log(response.data);
+          if (response.data =="Ok"){
+            this.props.history.push('/dashboard');
+            Alert.success('Bienvenido', {
+              position: 'bottom-left'
+            });
+          }
+          else {
+            Alert.error(response.data, {
+              position: 'bottom-left'
+            });
+            //this.state.flag = true;
+          }
+        })
+        .catch((error) => {
+             Alert.error('Error!', {
+      position: 'bottom-left'
+    });
+        })
+    
     
   }
+  handleClick3(e) {
+    //e.preventDefault();
+    Alert.error('Test message error!', {
+      position: 'bottom-left'
+    });
+}
 
   render() {
+    
     const { email, password,flag } = this.state;
     return (
       <Container className="Login">
@@ -69,7 +108,7 @@ class Login extends Component {
             <img src={logo} alt="logo" width="30%" height="30%" />
           </div>
         <h2>Login</h2>
-        <Form className="form" onSubmit={ (e) => this.submitForm(e) }>
+        <Form className="form" onSubmit={ (e) => {this.submitForm(e)} }>
           <Col>
             <FormGroup>
               <Label>Username</Label>
@@ -108,11 +147,10 @@ class Login extends Component {
             />
             </FormGroup>
           </Col>
-          <Button>Submit
-
-          
-          </Button>
-       
+          <Button
+          //onClick={this.handleClick3}
+          >Submit</Button>
+    <Alert timeout={1000} />
           
       </Form>
       </Container>
