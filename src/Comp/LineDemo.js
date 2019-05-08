@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { Line,Bar } from 'react-chartjs-2';
-import {GetData} from './data'
-//import { unestable_createResource} from 'react-cache'
+import {unestable_createResource} from 'react-cache'
+import { readFile } from 'fs';
 // const Http = new XMLHttpRequest();
 const url = 'https://parking-tool-back.herokuapp.com/parking_tool/api/v1.0/actual/cars';
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
@@ -12,7 +12,7 @@ const proxyurl = "https://cors-anywhere.herokuapp.com/";
 //     console.log(Http.responseText);
 // }}
 
-
+const costo=5;
 
 
 var contadores= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
@@ -31,6 +31,8 @@ var key,prueba,count=0;
             var hora = pruebadate.getHours()
             contadores[hora]=contadores[hora]+1
             console.log(contadores)
+            console.log(contadores.map(function(x) { return x * costo; })
+            )
     } 
     const datadeprueba = {
         labels: ['00','1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24'],
@@ -90,6 +92,9 @@ const data = {
     }
   ]
 };
+
+
+
 
 export default class LineDemo extends Component {
 
