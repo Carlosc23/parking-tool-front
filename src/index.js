@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Route, Link, BrowserRouter as Router,Switch } from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 import App from './App';
 import Welcome from './pages/welcome/Welcome';
@@ -11,6 +12,7 @@ import admin from './pages/admin/admin';
 import uso from './pages/admin/uso';
 import ingresos from './pages/admin/ingresos';
 import sensores from './pages/admin/sensores';
+import Login from './pages/Login/Login';
 
 import * as serviceWorker from './serviceWorker';
 var tipo= 0;
@@ -33,6 +35,7 @@ const routing = (
             <Route path="/ingresos" component={ingresos} /> 
             <Route path="/sensores" component={sensores} /> 
 
+            <Route path="/Login" component={Login} /> 
 
     </Switch>
     </Router>
