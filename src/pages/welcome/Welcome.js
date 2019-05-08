@@ -22,7 +22,7 @@ export default class Welcome extends Component {
             Bienvenido al Parqueo
         </h1>
           <div className="logo">
-            <img src={logo} alt="logo" width="30%" height="30%" />
+            <img src={logo} id="logomainm" alt="logo" width="30%" height="30%" />
           </div>
           <p id="mainmessage">
             Seleccione el tipo de parqueo que necesita

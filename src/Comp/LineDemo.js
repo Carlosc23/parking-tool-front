@@ -16,6 +16,8 @@ const costo=5;
 
 
 var contadores= [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+
+
 fetch(proxyurl +url)
 .then(data=>{return data.json()})
 .then(res=> {console.log(res)
@@ -70,7 +72,7 @@ const data = {
   labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
   datasets: [
     {
-      label: 'Cantidad de dinero ganado por horas',
+      label: 'Cantidad de dinero ganado por ',
       fill: false,
       lineTension: 0.1,
       backgroundColor: 'rgba(75,192,192,0.4)',
@@ -106,7 +108,7 @@ export default class LineDemo extends Component {
         <Line ref="chart"  data={data}
           height={350}
           width={100}
-          backgroundColor="black"
+          backgroundColor="beige"
           options={{ maintainAspectRatio: false }}
 
         />

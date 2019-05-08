@@ -21,7 +21,7 @@ class Size extends Component {
 
           </h1>
           <div className="logo">
-            <img src={logo} alt="logo" width="30%" height="30%" />
+            <img src={logo} id="logomain" alt="logo" width="30%" height="30%" />
           </div>
           <p id="mainmessage">
             Seleccione el tipo de vehiculo que tienee. 
@@ -35,7 +35,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 1
               }
-            }}>        <img src={small} alt="small" width="30.5%" height="30%" />
+            }}>        <img src={small} alt="small" width="32%" height="50%" margin-top="1%" />
             </Link>
             <Link to={{
               pathname: '/ticket',
@@ -43,7 +43,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 2
               }
-            }}>        <img src={med} alt="med" width="32%" height="30%" />
+            }}>        <img src={med} alt="med" width="30%" height="30%" />
 
             </Link>
             <Link to={{
@@ -52,7 +52,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 3
               }
-            }}>        <img src={large} alt="large" width="32%" height="30%" />
+            }}>        <img src={large} alt="large" width="30%" height="30%" />
 
             </Link>
           </div>

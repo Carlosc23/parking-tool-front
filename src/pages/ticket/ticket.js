@@ -2,9 +2,7 @@ import React, { Component }  from "react";
 import logo from '../../assets/img/logo.png';
 import fin from '../../assets/img/finalscreen.png';
 import '../../styles/ticket.css'
-import btn from '../../assets/img/botonticket.png';
 
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 
 class Parking extends Component {
     render() {
@@ -13,7 +11,7 @@ class Parking extends Component {
         <header>
        
         <div className="logo">
-        <img src={logo} alt="logo" width="30%" height="30%" />
+        <img src={logo} alt="logos" id="logomain" width="32%" height="30%" />
         </div>
       
         <div className="finalmessage">

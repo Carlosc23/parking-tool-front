@@ -25,7 +25,7 @@ class Parking extends Component {
         <h1 >
         </h1>
         <div className="logo">
-        <img src={logo} alt="logo" width="30%" height="30%" />
+        <img src={logo} alt="logo" id="logomain" width="30%" height="30%" />
         </div>
         <p className="mensaje" >
             Por favor busque el parqueo que tenga la luz del color indicado en el mini mapa.
