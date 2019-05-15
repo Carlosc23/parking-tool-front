@@ -29,7 +29,10 @@ export default props => {
         Sensores
       </a>
 
-     
+      <a className="menu-item" href="/login">
+        Cerrar Sesion
+      </a>
+
     </Menu>
   );
 };

@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import { Line,Bar } from 'react-chartjs-2';
+import {reactLocalStorage} from 'reactjs-localstorage';
 
 
 // const Http = new XMLHttpRequest();
@@ -72,10 +73,34 @@ export default class BarDemo extends Component {
              //console.log(mio.time.check_in)
              var tiempo = mio.time.check_in
              var pruebadate = new Date(tiempo)
+           console.log("prueba_actual date")
+           var actual_date = new Date (reactLocalStorage.get('date'))
+
+           console.log (actual_date.getFullYear())
+           console.log(actual_date.getMonth())
+            console.log("the date from the graphic")
+            console.log(pruebadate.getFullYear())
+
+            if(actual_date.getFullYear()==pruebadate.getFullYear()){
+
+              if (actual_date.getMonth()==pruebadate.getMonth()){
+                
+                if (actual_date.getDay()==pruebadate.getDay()){
+                  console.log("ES EL MISMO DIA")
+
+
+                  var hora = pruebadate.getHours()
+                  contadores[hora]=contadores[hora]+1
+                }
+                
+
+              }
+
+
+            }
+
+
            
-           console.log(pruebadate.getDate())
-             var hora = pruebadate.getHours()
-             contadores[hora]=contadores[hora]+1
        //    console.log(contadores)
             //console.log(contadores.map(function(x) { return x * costo; }))
      } 
