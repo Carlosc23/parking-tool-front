@@ -22,7 +22,8 @@ export default function App() {
         <h1 id="subingresos">Ingresos por parqueo</h1>
         <br></br>
         <br></br>
-        <LineDemo />        <p id="miniingresos">El dia de hoy XX/XX/XXXX hemos tenido como las horas mas altas la 1 de la tarde, y las 8 de la noche. Con una ganancia maxima de Q.750 y una ganancia minima de Q.100</p>
+        <LineDemo />        
+        
 
     </div>
   );

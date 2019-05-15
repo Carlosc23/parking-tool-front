@@ -73,30 +73,14 @@ export default class BarDemo extends Component {
              //console.log(mio.time.check_in)
              var tiempo = mio.time.check_in
              var pruebadate = new Date(tiempo)
-           console.log("prueba_actual date")
            var actual_date = new Date (reactLocalStorage.get('date'))
-
-           console.log (actual_date.getFullYear())
-           console.log(actual_date.getMonth())
-            console.log("the date from the graphic")
-            console.log(pruebadate.getFullYear())
-
             if(actual_date.getFullYear()==pruebadate.getFullYear()){
-
-              if (actual_date.getMonth()==pruebadate.getMonth()){
-                
+              if (actual_date.getMonth()==pruebadate.getMonth()){ 
                 if (actual_date.getDay()==pruebadate.getDay()){
-                  console.log("ES EL MISMO DIA")
-
-
                   var hora = pruebadate.getHours()
                   contadores[hora]=contadores[hora]+1
                 }
-                
-
               }
-
-
             }
 
 
@@ -142,6 +126,8 @@ export default class BarDemo extends Component {
           options={{ maintainAspectRatio: false }}
 
         />
+        <p id="miniingresos">El dia de hoy {new Date(reactLocalStorage.get('date')).getDate()+"/"+new Date(reactLocalStorage.get('date')).getMonth()+"/"+new Date(reactLocalStorage.get('date')).getFullYear()} hemos tenido como la hora mas alta a las {contadores.indexOf(Math.max.apply(null,contadores))}:00 horas. Con una ocupacion maxima de {Math.max.apply(null,contadores)} parqueo(s) y una ocupacion minima de {Math.min.apply(null,contadores)}, a las {contadores.indexOf(Math.min.apply(null,contadores))}:00 horas.</p>
+
       </div>
     );
   }

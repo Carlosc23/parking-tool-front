@@ -19,7 +19,6 @@ export default function App() {
         <br></br>
         <br></br>
         <BarDemo />
-        <p id="miniuso">El dia de hoy XX/XX/XXXX hemos tenido como las horas mas altas la 1 de la tarde, y las 8 de la noche. Con una ocupacion maxima de 150 estacionamintos y una ocupacopn minima de 20</p>
 
     </div>
 

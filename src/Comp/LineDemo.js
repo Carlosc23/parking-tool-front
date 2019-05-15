@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import { Line,Bar } from 'react-chartjs-2';
 import {unestable_createResource} from 'react-cache'
+import {reactLocalStorage} from 'reactjs-localstorage';
+
 import { readFile } from 'fs';
 // const Http = new XMLHttpRequest();
 const url = 'https://parking-tool-back.herokuapp.com/parking_tool/api/v1.0/actual/cars';
@@ -124,11 +126,15 @@ export default class LineDemo extends Component {
             //console.log(mio.time.check_in)
             var tiempo = mio.time.check_in
             var pruebadate = new Date(tiempo)
-          //  console.log(pruebadate.getHours())
-            var hora = pruebadate.getHours()
-            contadores[hora]=contadores[hora]+1
-    //      console.log(contadores)
-           //console.log(contadores.map(function(x) { return x * costo; }))
+            var actual_date = new Date (reactLocalStorage.get('date'))
+            if(actual_date.getFullYear()==pruebadate.getFullYear()){
+              if (actual_date.getMonth()==pruebadate.getMonth()){ 
+                if (actual_date.getDay()==pruebadate.getDay()){
+                  var hora = pruebadate.getHours()
+                  contadores[hora]=contadores[hora]+1
+                }
+              }
+            }
     } 
 
     const datadeprueba = {
@@ -158,6 +164,9 @@ export default class LineDemo extends Component {
         ]
   }
 
+  console.log(Math.max.apply(null,contadores));
+console.log(contadores.indexOf(Math.max.apply(null,contadores)));
+  console.log(Math.min.apply(null,contadores));
 
     return (
       
@@ -169,7 +178,11 @@ export default class LineDemo extends Component {
           options={{ maintainAspectRatio: false }}
 
         />
+
+<p id="miniingresos">El dia de hoy {new Date(reactLocalStorage.get('date')).getDate()+"/"+new Date(reactLocalStorage.get('date')).getMonth()+"/"+new Date(reactLocalStorage.get('date')).getFullYear()} hemos tenido como la hora mas alta a las {contadores.indexOf(Math.max.apply(null,contadores))}:00 horas. Con una ganancia maxima de Q.{Math.max.apply(null,contadores)*costo} y una ganancia minima de Q.{Math.min.apply(null,contadores)*costo}, a las {contadores.indexOf(Math.min.apply(null,contadores))}:00 horas.</p>
       </div>
+
+      
     );
   }
 
