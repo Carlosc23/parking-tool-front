@@ -2,13 +2,17 @@
 
 import React from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import Example from './date';
+
 
 export default props => {
+
+  
   return (
     <Menu>
+<Example></Example> 
 
-<input id="date" type="date"></input>
-
+<br></br>
       <a className="menu-item" href="/admin">
         Home
       </a>

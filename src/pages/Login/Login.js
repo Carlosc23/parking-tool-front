@@ -20,6 +20,10 @@ import 'react-s-alert/dist/s-alert-css-effects/flip.css';
 import 'react-s-alert/dist/s-alert-css-effects/genie.css';
 import 'react-s-alert/dist/s-alert-css-effects/jelly.css';
 import 'react-s-alert/dist/s-alert-css-effects/stackslide.css';
+
+const proxyurl = "https://cors-anywhere.herokuapp.com/";
+
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -63,7 +67,7 @@ class Login extends Component {
   };
     e.preventDefault();
     console.log(`Email: ${ this.state.email }`);
-    axios.post('https://parking-tool-back.herokuapp.com/parking_tool/api/v1.0/Login', {
+    axios.post(proxyurl+'https://parking-tool-back.herokuapp.com/parking_tool/api/v1.0/Login', {
       email: this.state.email,
       password: this.state.password
     }, {headers: headers})

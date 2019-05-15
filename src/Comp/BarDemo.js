@@ -72,7 +72,8 @@ export default class BarDemo extends Component {
              //console.log(mio.time.check_in)
              var tiempo = mio.time.check_in
              var pruebadate = new Date(tiempo)
-           //  console.log(pruebadate.getHours())
+           
+           console.log(pruebadate.getDate())
              var hora = pruebadate.getHours()
              contadores[hora]=contadores[hora]+1
        //    console.log(contadores)

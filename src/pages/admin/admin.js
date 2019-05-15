@@ -3,7 +3,7 @@
 import React from 'react';
 import SideBar from './sidebar';
 import logo from '../../assets/img/logo.png';
-
+import Userimg from '../../assets/img/usr.jpg';
 import '../../styles/admin.css'
 
 export default function App() {
@@ -17,9 +17,10 @@ export default function App() {
       </div>
 
       <h1 id="subadmin">Pagina principal</h1>
-      <h3 id="miniadmin">Bienvenido "Administrador 1"</h3>
+      <img src={Userimg} id="usr" alt="urs" width="20%" height="28%" />
+      <h3 id="miniadmin">Bienvenido Carlos</h3>
 
-
+      
 
     </div>
   );
