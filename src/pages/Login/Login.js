@@ -109,7 +109,7 @@ class Login extends Component {
     return (
       <Container className="Login">
       <div className="logo">
-            <img src={logo} alt="logo" width="30%" height="30%" />
+            <img src={logo} alt="logo" id="logologin" width="30%" height="30%" />
           </div>
         <h2>Login</h2>
         <Form className="form" onSubmit={ (e) => {this.submitForm(e)} }>
