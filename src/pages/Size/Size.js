@@ -24,7 +24,7 @@ class Size extends Component {
             <img src={logo} id="logomain" alt="logo" width="30%" height="30%" />
           </div>
           <p id="mainmessage">
-            Seleccione el tipo de vehiculo que tienee. 
+            Seleccione el tipo de vehiculo que tiene. 
             {console.log("aaaa" + this.props.location.state.tipo)}
           </p>
 
@@ -35,7 +35,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 1
               }
-            }}>        <img src={small} alt="small" width="32%" height="50%" margin-top="1%" />
+            }}>        <img src={small} alt="small" width="32.9%" height="50%" />
             </Link>
             <Link to={{
               pathname: '/ticket',
@@ -43,7 +43,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 2
               }
-            }}>        <img src={med} alt="med" width="30%" height="30%" />
+            }}>        <img src={med} alt="med" width="32.0%" height="50%" />
 
             </Link>
             <Link to={{
@@ -52,7 +52,7 @@ class Size extends Component {
                 tipo: this.props.location.state.tipo,
                 tam: 3
               }
-            }}>        <img src={large} alt="large" width="30%" height="30%" />
+            }}>        <img src={large} alt="large"width="32.9%" height="50%" />
 
             </Link>
           </div>

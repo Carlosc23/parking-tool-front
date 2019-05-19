@@ -14,7 +14,9 @@
 #mainmessage{
     position: absolute;
     margin-top:17%;
-    margin-left:29%
+    margin-left:29%;
+    font-weight: bolder;
+
 }
 #logomain{
     margin-top: 1%;
@@ -27,7 +29,7 @@
 .sizecar{
     position: absolute;
     margin-top:21%;
-    margin-left:18%
+    margin-left:22%;
 }
 body{
     background: #000;
