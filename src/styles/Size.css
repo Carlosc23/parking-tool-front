@@ -11,11 +11,12 @@
     margin-top:2%;
     margin-left: 28%
 }
-#mainmessage{
+#mainmessagesize{
     position: absolute;
     margin-top:17%;
-    margin-left:29%;
+    margin-left: 25%;
     font-weight: bolder;
+    font-size: 150%;
 
 }
 #logomain{

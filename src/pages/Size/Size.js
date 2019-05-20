@@ -23,7 +23,7 @@ class Size extends Component {
           <div className="logo">
             <img src={logo} id="logomain" alt="logo" width="30%" height="30%" />
           </div>
-          <p id="mainmessage">
+          <p id="mainmessagesize">
             Seleccione el tipo de vehiculo que tiene. 
             {console.log("aaaa" + this.props.location.state.tipo)}
           </p>

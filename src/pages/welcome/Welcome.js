@@ -24,7 +24,7 @@ export default class Welcome extends Component {
           <div className="logo">
             <img src={logo} id="logomainm" alt="logo" width="30%" height="30%" />
           </div>
-          <p id="mainmessage">
+          <p id="mainmessagewelcome">
             Seleccione el tipo de parqueo que necesita
         </p>
           <div className="typeParking">
